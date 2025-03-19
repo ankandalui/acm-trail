@@ -1,0 +1,33 @@
+---
+// Import the global styles
+import "../styles/global.css";
+
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en" class="scrollbar-primary scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>FIEM ACM Student Chapter</title>
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col">
+      <Navbar client:load />
+      <main class="flex-grow">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.documentElement.style.scrollBehavior = "smooth";
+      });
+    </script>
+  </body>
+</html>

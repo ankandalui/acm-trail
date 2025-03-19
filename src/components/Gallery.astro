@@ -1,0 +1,215 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section id="gallery" class="relative py-24 bg-white overflow-hidden">
+  <!-- Decorative elements -->
+  <div
+    class="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-primary/5 blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-secondary/5 blur-3xl"
+  >
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold text-primary inline-block relative">
+        Gallery
+        <span
+          class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-secondary"
+        ></span>
+      </h2>
+      <p class="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
+        Explore moments from our past events, workshops, and community
+        gatherings
+      </p>
+    </div>
+
+    <!-- Gallery Tabs -->
+    <div class="mb-10 flex justify-center">
+      <div class="inline-flex bg-gray-100 rounded-lg p-1">
+        <button class="px-6 py-2 rounded-md bg-primary text-white font-medium"
+          >All</button
+        >
+        <button
+          class="px-6 py-2 text-gray-600 font-medium hover:text-primary transition-colors"
+          >Hackathons</button
+        >
+        <button
+          class="px-6 py-2 text-gray-600 font-medium hover:text-primary transition-colors"
+          >Workshops</button
+        >
+        <button
+          class="px-6 py-2 text-gray-600 font-medium hover:text-primary transition-colors"
+          >Tech Talks</button
+        >
+      </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Gallery Item 1 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-xl shadow-lg aspect-square"
+        >
+          <img
+            src="/api/placeholder/800/800"
+            alt="Workshop on AI"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+          >
+            <h3 class="text-white font-bold text-lg">Workshop on AI</h3>
+            <p class="text-white/80 text-sm">October 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 2 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-xl shadow-lg aspect-square"
+        >
+          <img
+            src="/api/placeholder/800/800"
+            alt="Hackathon Winners"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+          >
+            <h3 class="text-white font-bold text-lg">Hackathon Winners</h3>
+            <p class="text-white/80 text-sm">September 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 3 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-xl shadow-lg aspect-square"
+        >
+          <img
+            src="/api/placeholder/800/800"
+            alt="Tech Talk Series"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+          >
+            <h3 class="text-white font-bold text-lg">Tech Talk Series</h3>
+            <p class="text-white/80 text-sm">August 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 4 -->
+      <div class="group">
+        <div
+          class="relative overflow-hidden rounded-xl shadow-lg aspect-square"
+        >
+          <img
+            src="/api/placeholder/800/800"
+            alt="Coding Competition"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+          >
+            <h3 class="text-white font-bold text-lg">Coding Competition</h3>
+            <p class="text-white/80 text-sm">July 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 5 -->
+      <div class="group sm:col-span-2">
+        <div class="relative overflow-hidden rounded-xl shadow-lg aspect-video">
+          <img
+            src="/api/placeholder/1200/675"
+            alt="Annual Conference"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+          >
+            <h3 class="text-white font-bold text-lg">Annual Conference</h3>
+            <p class="text-white/80 text-sm">June 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 6 -->
+      <div class="group sm:col-span-2">
+        <div class="relative overflow-hidden rounded-xl shadow-lg aspect-video">
+          <img
+            src="/api/placeholder/1200/675"
+            alt="Developer Meetup"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+          >
+            <h3 class="text-white font-bold text-lg">Developer Meetup</h3>
+            <p class="text-white/80 text-sm">May 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 7 -->
+      <div class="group lg:col-span-2">
+        <div
+          class="relative overflow-hidden rounded-xl shadow-lg aspect-square sm:aspect-[4/3]"
+        >
+          <img
+            src="/api/placeholder/1200/900"
+            alt="Team Building Event"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+          >
+            <h3 class="text-white font-bold text-lg">Team Building Event</h3>
+            <p class="text-white/80 text-sm">April 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 8 -->
+      <div class="group lg:col-span-2">
+        <div
+          class="relative overflow-hidden rounded-xl shadow-lg aspect-square sm:aspect-[4/3]"
+        >
+          <img
+            src="/api/placeholder/1200/900"
+            alt="Workshop on Web Development"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+          >
+            <h3 class="text-white font-bold text-lg">
+              Workshop on Web Development
+            </h3>
+            <p class="text-white/80 text-sm">March 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View More Button -->
+    <div class="mt-12 text-center">
+      <a
+        href="#"
+        class="inline-flex items-center bg-primary text-white px-8 py-3 rounded-lg shadow-lg hover:bg-secondary transition-colors"
+      >
+        View More Photos
+        <Icon name="mdi:chevron-right" class="w-5 h-5 ml-2" />
+      </a>
+    </div>
+  </div>
+</section>

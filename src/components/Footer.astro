@@ -1,0 +1,160 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="relative bg-primary text-white pt-0 mt-0">
+  <!-- Remove the wave div that was here -->
+
+  <div class="max-w-7xl mx-auto px-6 pt-16 pb-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 py-8">
+      <!-- Logo and About -->
+      <div class="col-span-1 md:col-span-1">
+        <div class="mb-4">
+          <span class="text-3xl font-bold tracking-tight">FIEM ACM</span>
+        </div>
+        <p class="text-white/80 mb-6">
+          Building a community of tech enthusiasts, innovators, and future
+          leaders in technology.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="https://www.facebook.com/profile.php?id=61569985330638"
+            target="_blank"
+            aria-label="Facebook"
+            rel="noopener noreferrer"
+            class="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all"
+          >
+            <Icon name="mdi:facebook" class="w-5 h-5" />
+          </a>
+          <a
+            href="https://www.instagram.com/acmfiem/"
+            target="_blank"
+            aria-label="Instagram"
+            rel="noopener noreferrer"
+            class="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all"
+          >
+            <Icon name="mdi:instagram" class="w-5 h-5" />
+          </a>
+          <a
+            aria-label="Twitter"
+            href="https://x.com/AcmFiem2857"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all"
+          >
+            <Icon name="mdi:twitter" class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 relative inline-block">
+          Quick Links
+          <span class="absolute -bottom-1 left-0 w-12 h-0.5 bg-white/30"></span>
+        </h3>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="#about"
+              class="text-white/70 hover:text-white transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#events"
+              class="text-white/70 hover:text-white transition-colors">Events</a
+            >
+          </li>
+          <li>
+            <a
+              href="#gallery"
+              class="text-white/70 hover:text-white transition-colors"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-white/70 hover:text-white transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 relative inline-block">
+          Resources
+          <span class="absolute -bottom-1 left-0 w-12 h-0.5 bg-white/30"></span>
+        </h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="text-white/70 hover:text-white transition-colors"
+              >ACM Digital Library</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-white/70 hover:text-white transition-colors"
+              >Learning Resources</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-white/70 hover:text-white transition-colors"
+              >Join ACM</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-white/70 hover:text-white transition-colors"
+              >Blog</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 relative inline-block">
+          Newsletter
+          <span class="absolute -bottom-1 left-0 w-12 h-0.5 bg-white/30"></span>
+        </h3>
+        <p class="text-white/70 mb-4">
+          Stay updated with our latest events and news
+        </p>
+        <div class="flex">
+          <input
+            type="email"
+            placeholder="Your email"
+            class="px-4 py-2 bg-white/10 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-white/50 placeholder-white/50 w-full"
+          />
+          <button
+            class="bg-white text-primary px-4 py-2 rounded-r-lg hover:bg-white/90 transition-colors"
+          >
+            <Icon name="mdi:send" class="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center"
+    >
+      <p class="text-white/60 text-sm">
+        &copy; 2025 FIEM ACM Student Chapter. All rights reserved.
+      </p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" class="text-white/60 hover:text-white text-sm"
+          >Privacy Policy</a
+        >
+        <a href="#" class="text-white/60 hover:text-white text-sm"
+          >Terms of Service</a
+        >
+        <a href="#" class="text-white/60 hover:text-white text-sm"
+          >Cookie Policy</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>

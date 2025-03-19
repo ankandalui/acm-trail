@@ -1,0 +1,238 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section id="events" class="relative py-24 bg-background overflow-hidden">
+  <!-- Decorative elements -->
+  <div
+    class="absolute top-20 right-0 w-72 h-72 rounded-full bg-primary/5 blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute bottom-10 left-10 w-48 h-48 rounded-full bg-secondary/5 blur-3xl"
+  >
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold text-primary inline-block relative">
+        Upcoming Events
+        <span
+          class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-secondary"
+        ></span>
+      </h2>
+      <p class="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
+        Join us for exciting opportunities to learn, grow, and connect with the
+        tech community
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Event Card 1 -->
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden group">
+        <div
+          class="h-48 bg-gradient-to-r from-primary to-secondary relative overflow-hidden"
+        >
+          <div class="absolute inset-0 flex items-center justify-center">
+            <Icon name="mdi:code-tags" class="w-24 h-24 text-white/30" />
+          </div>
+          <div
+            class="absolute top-4 left-4 bg-white/90 text-primary px-4 py-1 rounded-full font-medium text-sm"
+          >
+            Apr 15, 2025
+          </div>
+        </div>
+        <div class="p-6">
+          <h3
+            class="text-2xl font-bold text-primary group-hover:text-secondary transition-colors"
+          >
+            Hackspire
+          </h3>
+          <div class="flex items-center mt-2 text-gray-500 text-sm">
+            <Icon name="mdi:clock-outline" class="w-4 h-4 mr-1" />
+            <span>9:00 AM - 5:00 PM</span>
+            <Icon name="mdi:map-marker-outline" class="w-4 h-4 ml-4 mr-1" />
+            <span>Main Auditorium</span>
+          </div>
+          <p class="text-gray-600 mt-4">
+            A 24-hour hackathon where you can innovate and create real-world
+            solutions with your team. Great prizes for winners!
+          </p>
+          <div class="mt-6 flex items-center justify-between">
+            <div class="flex -space-x-2">
+              <div
+                class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-xs text-primary font-bold border-2 border-white"
+              >
+                +24
+              </div>
+              <div class="w-8 h-8 rounded-full bg-gray-200"></div>
+              <div class="w-8 h-8 rounded-full bg-gray-300"></div>
+              <div class="w-8 h-8 rounded-full bg-gray-400"></div>
+            </div>
+            <a
+              href="#"
+              class="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors"
+            >
+              Register Now
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 ml-1"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Card 2 -->
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden group">
+        <div
+          class="h-48 bg-gradient-to-r from-primary/90 to-secondary/90 relative overflow-hidden"
+        >
+          <div class="absolute inset-0 flex items-center justify-center">
+            <Icon name="mdi:presentation" class="w-24 h-24 text-white/30" />
+          </div>
+          <div
+            class="absolute top-4 left-4 bg-white/90 text-primary px-4 py-1 rounded-full font-medium text-sm"
+          >
+            May 5, 2025
+          </div>
+        </div>
+        <div class="p-6">
+          <h3
+            class="text-2xl font-bold text-primary group-hover:text-secondary transition-colors"
+          >
+            Tech Talks
+          </h3>
+          <div class="flex items-center mt-2 text-gray-500 text-sm">
+            <Icon name="mdi:clock-outline" class="w-4 h-4 mr-1" />
+            <span>2:00 PM - 4:00 PM</span>
+            <Icon name="mdi:map-marker-outline" class="w-4 h-4 ml-4 mr-1" />
+            <span>Seminar Hall</span>
+          </div>
+          <p class="text-gray-600 mt-4">
+            Engage with industry experts and leaders from top tech companies.
+            Learn about the latest trends and career opportunities.
+          </p>
+          <div class="mt-6 flex items-center justify-between">
+            <div class="flex -space-x-2">
+              <div
+                class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-xs text-primary font-bold border-2 border-white"
+              >
+                +18
+              </div>
+              <div class="w-8 h-8 rounded-full bg-gray-200"></div>
+              <div class="w-8 h-8 rounded-full bg-gray-300"></div>
+              <div class="w-8 h-8 rounded-full bg-gray-400"></div>
+            </div>
+            <a
+              href="#"
+              class="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors"
+            >
+              Reserve Seat
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 ml-1"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Card 3 -->
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden group">
+        <div
+          class="h-48 bg-gradient-to-r from-secondary/80 to-primary/80 relative overflow-hidden"
+        >
+          <div class="absolute inset-0 flex items-center justify-center">
+            <Icon name="mdi:laptop" class="w-24 h-24 text-white/30" />
+          </div>
+          <div
+            class="absolute top-4 left-4 bg-white/90 text-primary px-4 py-1 rounded-full font-medium text-sm"
+          >
+            Jun 12, 2025
+          </div>
+        </div>
+        <div class="p-6">
+          <h3
+            class="text-2xl font-bold text-primary group-hover:text-secondary transition-colors"
+          >
+            Workshops
+          </h3>
+          <div class="flex items-center mt-2 text-gray-500 text-sm">
+            <Icon name="mdi:clock-outline" class="w-4 h-4 mr-1" />
+            <span>10:00 AM - 1:00 PM</span>
+            <Icon name="mdi:map-marker-outline" class="w-4 h-4 ml-4 mr-1" />
+            <span>Lab Complex</span>
+          </div>
+          <p class="text-gray-600 mt-4">
+            Hands-on learning with experienced mentors. Master the latest
+            technologies and frameworks through practical sessions.
+          </p>
+          <div class="mt-6 flex items-center justify-between">
+            <div class="flex -space-x-2">
+              <div
+                class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-xs text-primary font-bold border-2 border-white"
+              >
+                +32
+              </div>
+              <div class="w-8 h-8 rounded-full bg-gray-200"></div>
+              <div class="w-8 h-8 rounded-full bg-gray-300"></div>
+              <div class="w-8 h-8 rounded-full bg-gray-400"></div>
+            </div>
+            <a
+              href="#"
+              class="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors"
+            >
+              Join Workshop
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 ml-1"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 text-center">
+      <a
+        href="#"
+        class="inline-flex items-center bg-primary text-white px-8 py-3 rounded-lg shadow-lg hover:bg-secondary transition-colors"
+      >
+        View All Events
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 ml-2"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,206 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section id="contact" class="relative py-24 bg-accent overflow-hidden">
+  <!-- Decorative elements -->
+  <div
+    class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-background to-transparent opacity-50"
+  >
+  </div>
+  <div
+    class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-primary/5 blur-3xl"
+  >
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-primary inline-block relative">
+        Contact Us
+        <span
+          class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-secondary"
+        ></span>
+      </h2>
+      <p class="mt-6 text-xl text-secondary max-w-2xl mx-auto">
+        Have questions? Want to collaborate? Get in touch with us today!
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div
+        class="bg-white rounded-xl shadow-lg p-8 transform transition-all hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center"
+      >
+        <div
+          class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+        >
+          <Icon name="mdi:email-outline" class="w-8 h-8 text-primary" />
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Email Us</h3>
+        <p class="text-gray-600 mb-4">
+          Our team is here to answer your questions
+        </p>
+        <a
+          href="mailto:test@gmail.com"
+          class="text-primary font-medium hover:text-secondary transition-colors"
+        >
+          test@gmail.com
+        </a>
+      </div>
+
+      <div
+        class="bg-white rounded-xl shadow-lg p-8 transform transition-all hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center"
+      >
+        <div
+          class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+        >
+          <Icon name="mdi:map-marker-outline" class="w-8 h-8 text-primary" />
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Visit Us</h3>
+        <p class="text-gray-600 mb-4">FIEM Campus, Kolkata</p>
+        <a
+          href="#"
+          class="text-primary font-medium hover:text-secondary transition-colors"
+        >
+          Get Directions
+        </a>
+      </div>
+
+      <div
+        class="bg-white rounded-xl shadow-lg p-8 transform transition-all hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center"
+      >
+        <div
+          class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+        >
+          <Icon name="mdi:account-group-outline" class="w-8 h-8 text-primary" />
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Social Media</h3>
+        <p class="text-gray-600 mb-4">Follow us for updates and news</p>
+        <div class="flex space-x-4">
+          <a
+            href="https://www.facebook.com/profile.php?id=61569985330638"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary hover:text-secondary transition-colors"
+          >
+            <Icon name="mdi:facebook" class="w-6 h-6" />
+          </a>
+          <a
+            href="https://www.instagram.com/acmfiem/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary hover:text-secondary transition-colors"
+          >
+            <Icon name="mdi:instagram" class="w-6 h-6" />
+          </a>
+          <a
+            href="https://x.com/AcmFiem2857"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary hover:text-secondary transition-colors"
+          >
+            <Icon name="mdi:twitter" class="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-white rounded-2xl shadow-xl overflow-hidden mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="p-8 md:p-12">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            Send Us a Message
+          </h3>
+          <form class="space-y-4">
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-700 mb-1">Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+              />
+            </div>
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="4"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-primary text-white font-medium py-3 px-6 rounded-lg shadow hover:bg-secondary transition-colors"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+        <div
+          class="bg-gradient-to-br from-primary to-secondary text-white p-8 md:p-12 flex items-center"
+        >
+          <div>
+            <h3 class="text-2xl font-bold mb-6">Join Our Community</h3>
+            <p class="mb-8 opacity-90">
+              Connect with like-minded individuals, gain access to exclusive
+              resources, and participate in cutting-edge technical activities.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="bg-white/20 p-2 rounded mr-4">
+                  <Icon name="mdi:calendar-check" class="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 class="font-medium">Regular Events</h4>
+                  <p class="opacity-75 text-sm">
+                    Workshops, hackathons, and tech talks
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-white/20 p-2 rounded mr-4">
+                  <Icon name="mdi:account-group" class="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 class="font-medium">Networking</h4>
+                  <p class="opacity-75 text-sm">
+                    Connect with industry professionals
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-white/20 p-2 rounded mr-4">
+                  <Icon name="mdi:school" class="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 class="font-medium">Learning Resources</h4>
+                  <p class="opacity-75 text-sm">
+                    Access to valuable tech education
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
