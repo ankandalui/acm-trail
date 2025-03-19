@@ -111,8 +111,8 @@ export default function Navbar() {
 
         {/* Overlay */}
         <div
-          className={`fixed inset-0 bg-opacity-50 transition-opacity duration-300 md:hidden ${
-            isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 md:hidden ${
+            isMenuOpen ? "opacity-30" : "opacity-0 pointer-events-none"
           }`}
           style={{ zIndex: 30 }}
           onClick={() => setIsMenuOpen(false)}
