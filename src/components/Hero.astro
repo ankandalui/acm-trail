@@ -48,41 +48,36 @@
       </div>
     </div>
 
-    <!-- For Mobile: Stacked layout with text overlay on image -->
+    <!-- For Mobile: Stacked layout with content -->
     <div class="lg:hidden relative">
-      <!-- Logo/Banner Image as background -->
-      <div class="relative h-screen w-full">
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-background/80 to-background/95 z-10"
-        >
-        </div>
-        <img
-          src="./fiem-acm-logo.svg"
-          alt="FIEM ACM Logo"
-          class="w-full h-full object-contain z-0"
-        />
-      </div>
+      <!-- Full page background with proper gradient -->
+      <div class="fixed inset-0 bg-cyan-50 z-0"></div>
 
-      <!-- Text Content Overlay -->
-      <div
-        class="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-4 sm:px-6"
-      >
-        <div class="space-y-6 max-w-md">
-          <div>
-            <span class="text-lg font-semibold text-primary">FIEM ACM</span>
-          </div>
+      <!-- Content Container -->
+      <div class="relative z-10 flex flex-col items-center h-auto mb-2">
+        <!-- Logo/Image Container - Adjusted to minimize space -->
+        <div class="w-full max-w-md mx-auto pt-4 pb-0">
+          <img
+            src="./fiem-acm-logo.svg"
+            alt="FIEM ACM Logo"
+            class="w-full h-auto max-h-60 object-contain"
+          />
+        </div>
+
+        <!-- Text Content - Significantly pulled up with larger negative margin -->
+        <div class="text-center px-4 sm:px-6 space-y-2 max-w-md -mt-12">
           <h1
             class="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight"
           >
             Welcome to <span class="text-primary">FIEM</span>
-            <span class="text--secondary">ACM Student</span>
+            <span class="text-secondary">ACM Student</span>
             <span class="text-primary">Chapter</span>
           </h1>
           <p class="text-lg text-gray-700">
             Empowering students to innovate and learn through technology. Join
             us in shaping the future of computing.
           </p>
-          <div class="flex flex-col gap-4 w-full max-w-xs mx-auto">
+          <div class="flex flex-col gap-4 w-full max-w-xs mx-auto mt-4 mb-4">
             <a
               href="#about"
               class="inline-flex justify-center items-center px-6 py-3 text-base sm:text-lg font-medium text-white bg-primary rounded-lg hover:bg-secondary transition-colors duration-200 shadow-lg hover:shadow-xl"
