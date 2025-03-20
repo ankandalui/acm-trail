@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+/* Theme Colors */
+@theme {
+    --color-primary: #3674B5;
+    --color-secondary: #578FCA;
+    --color-accent: #A1E3F9;
+    --color-background: #D1F8EF;
+    --color-success: #28a745;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Apply smooth scrolling to Tailwind */
+html.scroll-smooth {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar Styles */
+@layer utilities {
+    .scrollbar-primary {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-primary) #f1f1f1;
+    }
+
+    .scrollbar-primary::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    .scrollbar-primary::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .scrollbar-primary::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
+        border-radius: 10px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .scrollbar-primary::-webkit-scrollbar-thumb:hover {
+        background: var(--color-secondary);
+    }
+
+    /* Success variant */
+    .scrollbar-success {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-success) #f1f1f1;
+    }
+
+    .scrollbar-success::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    .scrollbar-success::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .scrollbar-success::-webkit-scrollbar-thumb {
+        background: var(--color-success);
+        border-radius: 10px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .scrollbar-success::-webkit-scrollbar-thumb:hover {
+        background: color-mix(in srgb, var(--color-success), white 20%);
+    }
+}
+
+/* Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: #333;
+}
+
+/* Prevent Overscrolling on Mobile */
+body,
+html {
+    overscroll-behavior: none;
+}

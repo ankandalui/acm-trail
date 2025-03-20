@@ -45,6 +45,14 @@ export default function Navbar() {
               </a>
             </li>
             <li>
+              <a
+                href="#our-team"
+                className="hover:text-accent transition-colors"
+              >
+                Team
+              </a>
+            </li>
+            <li>
               <a href="#events" className="hover:text-accent transition-colors">
                 Events
               </a>

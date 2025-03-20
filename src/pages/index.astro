@@ -5,6 +5,7 @@ import About from "../components/About.astro";
 import Events from "../components/Events.astro";
 import Contact from "../components/Contact.astro";
 import GallerySection from "../components/Gallery";
+import OurTeam from "../components/OurTeam";
 ---
 
 <BaseLayout>
@@ -12,5 +13,6 @@ import GallerySection from "../components/Gallery";
   <About />
   <Events />
   <GallerySection client:load />
+  <OurTeam client:load />
   <Contact />
 </BaseLayout>
