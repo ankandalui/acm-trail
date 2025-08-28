@@ -84,7 +84,10 @@ const OurTeam = () => {
   );
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-background to-gray-100 py-16 md:py-24">
+    <section className="relative overflow-hidden bg-white py-16 md:py-24">
+      {/* Blueish spotlight separator */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-48 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent rounded-full blur-3xl"></div>
+
       <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full" />
       <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full" />
 

@@ -2,128 +2,317 @@
 
 ---
 
-<header class="bg-primary shadow-md py-4">
-  <nav class="max-w-7xl mx-auto px-4">
-    <div class="flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-white">ACM Student Chapter</h1>
+<!-- Navbar Container -->
+<div class="sticky inset-x-0 top-0 z-40 w-full">
+  <!-- Desktop Navigation -->
+  <div
+    id="nav-body"
+    class="relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent transition-all duration-300 ease-in-out"
+    style="min-width: 800px;"
+  >
+    <!-- Logo -->
+    <div class="relative z-20 mr-4 flex items-center justify-center px-1 py-1 w-20 h-20">
+      <img
+        src="/fiem-acm-logo.svg"
+        alt="ACM Logo"
+        width="100"
+        height="100"
+        class="rounded-full w-full h-full object-cover drop-shadow-lg"
+      />
+    </div>
 
-      <!-- Mobile menu button with animated icon -->
+    <!-- Desktop Menu Items -->
+    <div
+      id="nav-items"
+      class="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-4 text-lg font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-4"
+    >
+      <a
+        href="/"
+        class="nav-item relative px-6 py-3 text-neutral-600 dark:text-neutral-300 transition-colors hover:text-zinc-800 dark:hover:text-white"
+        data-index="0"
+      >
+        <span class="relative z-20">Home</span>
+      </a>
+      <a
+        href="#about"
+        class="nav-item relative px-6 py-3 text-neutral-600 dark:text-neutral-300 transition-colors hover:text-zinc-800 dark:hover:text-white"
+        data-index="1"
+      >
+        <span class="relative z-20">About</span>
+      </a>
+      <a
+        href="#our-team"
+        class="nav-item relative px-6 py-3 text-neutral-600 dark:text-neutral-300 transition-colors hover:text-zinc-800 dark:hover:text-white"
+        data-index="2"
+      >
+        <span class="relative z-20">Team</span>
+      </a>
+      <a
+        href="#events"
+        class="nav-item relative px-6 py-3 text-neutral-600 dark:text-neutral-300 transition-colors hover:text-zinc-800 dark:hover:text-white"
+        data-index="3"
+      >
+        <span class="relative z-20">Events</span>
+      </a>
+      <a
+        href="#contact"
+        class="nav-item relative px-6 py-3 text-neutral-600 dark:text-neutral-300 transition-colors hover:text-zinc-800 dark:hover:text-white"
+        data-index="4"
+      >
+        <span class="relative z-20">Contact</span>
+      </a>
+      <!-- Hover indicator -->
+      <div
+        id="hover-indicator"
+        class="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800 opacity-0 transition-all duration-200 ease-out pointer-events-none"
+      ></div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="relative z-20">
+      <a
+        href="#contact"
+        class="px-6 py-3 rounded-md bg-white text-black text-lg font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+      >
+        Join Us
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div
+    id="mobile-nav"
+    class="relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden transition-all duration-300 ease-in-out"
+  >
+    <!-- Mobile Header -->
+    <div class="flex w-full flex-row items-center justify-between px-4">
+      <!-- Mobile Logo -->
+      <div class="relative z-20 flex items-center justify-center w-16 h-16">
+        <img
+          src="/fiem-acm-logo.svg"
+          alt="ACM Logo"
+          width="48"
+          height="48"
+          class="rounded-full w-full h-full object-cover drop-shadow-lg"
+        />
+      </div>
+
+      <!-- Mobile Menu Toggle -->
       <button
         id="mobile-menu-button"
-        class="md:hidden text-white relative w-6 h-6 z-50"
+        class="relative z-50 p-3"
         aria-label="Menu"
       >
-        <span
-          class="block absolute h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out -translate-y-2"
-        ></span>
-        <span
-          class="block absolute h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out translate-y-0"
-        ></span>
-        <span
-          class="block absolute h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out translate-y-2"
-        ></span>
+        <!-- Menu Icon -->
+        <svg
+          id="menu-icon"
+          class="w-7 h-7 text-black dark:text-white transition-opacity duration-200"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <!-- Close Icon -->
+        <svg
+          id="close-icon"
+          class="w-7 h-7 text-black dark:text-white absolute top-3 left-3 opacity-0 transition-opacity duration-200"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
       </button>
-
-      <!-- Desktop menu -->
-      <ul class="hidden md:flex space-x-6 text-white">
-        <li>
-          <a href="/" class="hover:text-accent transition-colors">Home</a>
-        </li>
-        <li>
-          <a href="#about" class="hover:text-accent transition-colors">About</a>
-        </li>
-        <li>
-          <a href="#events" class="hover:text-accent transition-colors"
-            >Events</a
-          >
-        </li>
-        <li>
-          <a href="#contact" class="hover:text-accent transition-colors"
-            >Contact</a
-          >
-        </li>
-      </ul>
     </div>
 
-    <!-- Mobile menu - Sliding from right -->
+    <!-- Mobile Menu -->
     <div
       id="mobile-menu"
-      class="fixed top-0 right-0 w-1/2 h-full bg-primary shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden"
-      style="z-index: 40;"
+      class="absolute inset-x-0 top-16 z-50 w-full flex-col items-start justify-start gap-4 rounded-lg bg-white/10 backdrop-blur-xl border border-white/20 px-4 py-8 shadow-[0_8px_32px_rgba(54,116,181,0.1),_0_4px_16px_rgba(54,116,181,0.06),_0_0_0_1px_rgba(255,255,255,0.1)_inset] opacity-0 pointer-events-none transition-all duration-300 ease-in-out transform scale-95 hidden"
     >
-      <div class="pt-20 px-6">
-        <ul class="flex flex-col space-y-6 text-white">
-          <li>
-            <a
-              href="/"
-              class="block text-lg hover:text-accent transition-colors">Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="#about"
-              class="block text-lg hover:text-accent transition-colors">About</a
-            >
-          </li>
-          <li>
-            <a
-              href="#events"
-              class="block text-lg hover:text-accent transition-colors"
-              >Events</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contact"
-              class="block text-lg hover:text-accent transition-colors"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </div>
+      <a
+        href="/"
+        class="mobile-nav-link block w-full text-xl font-medium text-neutral-600 dark:text-neutral-300 hover:text-zinc-800 dark:hover:text-white transition-colors py-3"
+      >
+        Home
+      </a>
+      <a
+        href="#about"
+        class="mobile-nav-link block w-full text-xl font-medium text-neutral-600 dark:text-neutral-300 hover:text-zinc-800 dark:hover:text-white transition-colors py-3"
+      >
+        About
+      </a>
+      <a
+        href="#our-team"
+        class="mobile-nav-link block w-full text-xl font-medium text-neutral-600 dark:text-neutral-300 hover:text-zinc-800 dark:hover:text-white transition-colors py-3"
+      >
+        Team
+      </a>
+      <a
+        href="#events"
+        class="mobile-nav-link block w-full text-xl font-medium text-neutral-600 dark:text-neutral-300 hover:text-zinc-800 dark:hover:text-white transition-colors py-3"
+      >
+        Events
+      </a>
+      <a
+        href="#contact"
+        class="mobile-nav-link block w-full text-xl font-medium text-neutral-600 dark:text-neutral-300 hover:text-zinc-800 dark:hover:text-white transition-colors py-3"
+      >
+        Contact
+      </a>
     </div>
-
-    <!-- Overlay -->
-    <div
-      id="overlay"
-      class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden z-30"
-    >
-    </div>
-  </nav>
-</header>
+  </div>
+</div>
 
 <script>
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const overlay = document.getElementById("overlay");
-  const spans = mobileMenuButton?.querySelectorAll("span");
-
-  function toggleMenu() {
-    spans?.forEach((span, index) => {
-      if (index === 0) {
-        span.classList.toggle("rotate-45");
-        span.classList.toggle("translate-y-2.5");
-        span.classList.toggle("-translate-y-2");
-      } else if (index === 1) {
-        span.classList.toggle("opacity-0");
-      } else if (index === 2) {
-        span.classList.toggle("-rotate-45");
-        span.classList.toggle("translate-y-2.5");
-        span.classList.toggle("translate-y-2");
+  // Navbar scroll effects
+  let lastScrollY = 0;
+  let ticking = false;
+  
+  const navBody = document.getElementById("nav-body");
+  const mobileNav = document.getElementById("mobile-nav");
+  const hoverIndicator = document.getElementById("hover-indicator");
+  
+  function updateNavbar() {
+    const scrollY = window.scrollY;
+    const isScrolled = scrollY > 100;
+    
+    // Desktop navbar effects
+    if (navBody) {
+      if (isScrolled) {
+        navBody.style.backdropFilter = "blur(20px)";
+        navBody.style.boxShadow = "0 8px 32px rgba(54, 116, 181, 0.1), 0 4px 16px rgba(54, 116, 181, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.1) inset";
+        navBody.style.width = "70%";
+        navBody.style.transform = "translateY(20px)";
+        navBody.classList.add("bg-white/10", "border", "border-white/20");
+        navBody.classList.remove("bg-white/80", "dark:bg-neutral-950/80");
+      } else {
+        navBody.style.backdropFilter = "blur(10px)";
+        navBody.style.boxShadow = "0 4px 16px rgba(54, 116, 181, 0.05)";
+        navBody.style.width = "100%";
+        navBody.style.transform = "translateY(0px)";
+        navBody.classList.add("bg-white/5", "border", "border-white/10");
+        navBody.classList.remove("bg-white/10", "border-white/20");
+      }
+    }
+    
+    // Mobile navbar effects
+    if (mobileNav) {
+      if (isScrolled) {
+        mobileNav.style.backdropFilter = "blur(20px)";
+        mobileNav.style.boxShadow = "0 8px 32px rgba(54, 116, 181, 0.1), 0 4px 16px rgba(54, 116, 181, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.1) inset";
+        mobileNav.style.width = "90%";
+        mobileNav.style.paddingLeft = "12px";
+        mobileNav.style.paddingRight = "12px";
+        mobileNav.style.borderRadius = "4px";
+        mobileNav.style.transform = "translateY(20px)";
+        mobileNav.classList.add("bg-white/10", "border", "border-white/20");
+        mobileNav.classList.remove("bg-white/80", "dark:bg-neutral-950/80");
+      } else {
+        mobileNav.style.backdropFilter = "blur(10px)";
+        mobileNav.style.boxShadow = "0 4px 16px rgba(54, 116, 181, 0.05)";
+        mobileNav.style.width = "100%";
+        mobileNav.style.paddingLeft = "0px";
+        mobileNav.style.paddingRight = "0px";
+        mobileNav.style.borderRadius = "2rem";
+        mobileNav.style.transform = "translateY(0px)";
+        mobileNav.classList.add("bg-white/5", "border", "border-white/10");
+        mobileNav.classList.remove("bg-white/10", "border-white/20");
+      }
+    }
+    
+    lastScrollY = scrollY;
+    ticking = false;
+  }
+  
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateNavbar);
+      ticking = true;
+    }
+  }
+  
+  window.addEventListener("scroll", requestTick);
+  
+  // Hover effects for navigation items
+  const navItems = document.querySelectorAll(".nav-item");
+  
+  navItems.forEach((item, index) => {
+    item.addEventListener("mouseenter", () => {
+      if (hoverIndicator && item.parentElement) {
+        const rect = item.getBoundingClientRect();
+        const containerRect = item.parentElement.getBoundingClientRect();
+        
+        hoverIndicator.style.opacity = "1";
+        hoverIndicator.style.left = `${rect.left - containerRect.left}px`;
+        hoverIndicator.style.width = `${rect.width}px`;
+        hoverIndicator.style.height = `${rect.height}px`;
+        hoverIndicator.style.top = `${rect.top - containerRect.top}px`;
       }
     });
+  });
+  
+  // Hide hover indicator when leaving nav items container
+  const navItemsContainer = document.getElementById("nav-items");
+  navItemsContainer?.addEventListener("mouseleave", () => {
+    if (hoverIndicator) {
+      hoverIndicator.style.opacity = "0";
+    }
+  });
+  
+  // Mobile menu functionality
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+  let isMenuOpen = false;
 
-    mobileMenu?.classList.toggle("translate-x-full");
-    overlay?.classList.toggle("opacity-0");
-    overlay?.classList.toggle("pointer-events-none");
-    document.body.classList.toggle("overflow-hidden");
+  function toggleMobileMenu() {
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+      // Show menu
+      mobileMenu?.classList.remove("hidden", "opacity-0", "pointer-events-none", "scale-95");
+      mobileMenu?.classList.add("flex");
+      menuIcon?.classList.add("opacity-0");
+      closeIcon?.classList.remove("opacity-0");
+      document.body.classList.add("overflow-hidden");
+    } else {
+      // Hide menu
+      mobileMenu?.classList.add("opacity-0", "pointer-events-none", "scale-95");
+      mobileMenu?.classList.remove("flex");
+      setTimeout(() => {
+        mobileMenu?.classList.add("hidden");
+      }, 300);
+      menuIcon?.classList.remove("opacity-0");
+      closeIcon?.classList.add("opacity-0");
+      document.body.classList.remove("overflow-hidden");
+    }
   }
 
-  mobileMenuButton?.addEventListener("click", toggleMenu);
-  overlay?.addEventListener("click", toggleMenu);
+  mobileMenuButton?.addEventListener("click", toggleMobileMenu);
 
-  const mobileMenuLinks = mobileMenu?.querySelectorAll("a");
-  mobileMenuLinks?.forEach((link) => {
-    link.addEventListener("click", toggleMenu);
+  // Close mobile menu when clicking on links
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+  mobileNavLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (isMenuOpen) {
+        toggleMobileMenu();
+      }
+    });
   });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", (e) => {
+    const target = e.target as Element;
+    if (isMenuOpen && 
+        !mobileNav?.contains(target) && 
+        !mobileMenuButton?.contains(target)) {
+      toggleMobileMenu();
+    }
+  });
+
+  // Initial call to set navbar state
+  updateNavbar();
 </script>
